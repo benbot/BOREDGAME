@@ -5,8 +5,7 @@
  	<app file="Main" main="Main" path="bin" />
 
 	<window fps="30" background="0x333333" />
-	<window width="640" height="480" resizable="true" unless="mobile" />
-	<window fullscreen="true" if="mobile" />
+	<window width="640" height="480" resizable="false" unless="mobile" />
 
 	<source path="src" />
 

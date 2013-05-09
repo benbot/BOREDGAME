@@ -5,7 +5,7 @@ import com.haxepunk.Entity;
 import com.haxepunk.graphics.Image;
 import com.haxepunk.utils.Input;
 import com.haxepunk.math.Vector;
-//import scenes.GameOver;
+import scenes.Level;
 
 class Box extends Entity
 {
@@ -44,13 +44,15 @@ class Box extends Entity
                 y += 100 * HXP.elapsed * direction.y;
 
                 deltaTime += HXP.elapsed;
+
                 if(deltaTime >= 3.5)
                 {
                         HXP.scene.remove(this);
                 }
+
                 if(collidePoint(x, y, mouseX, mouseY))
                 {
-                        trace("YOU LOSE SUCKAH");
+                        cast(HXP.scene, Level).score--;
                 }
 
         }
